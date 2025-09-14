@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>$1.5 Million Savings Using Readability AI | Graas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="GraaS-High-Res-Photoroom.png" alt="Graas Logo" class="logo-img" style="height:60px;vertical-align:middle;margin-right:12px;">
+                Graas
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#capabilities">Capabilities</a></li>
+                <li><a href="products-home.html">Products</a></li>
+                <li><a href="insights-home.html">Insights</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="about wide-frame">
+            <div class="card one-frame-content left-align">
+                <h2>$1.5 Million Savings Using Readability AI</h2>
+                <p>A semiconductor company reduced L3 support tickets by 37% and saved $1.5M in four months using Readability AI. By improving documentation comprehension with a custom Readability Index and automated LLM rewrites, they cut resolution time, boosted self-service, and validated results with rigorous analytics and testing.</p>
+                <h2 style="margin-top:2.5rem;">KPIs</h2>
+                <h3>Situation</h3>
+                <p>A leading Semiconductor industry major faced a stubborn wave of Level 3 (live call) support tickets. The company had already invested 18 months and $4 million into building the support Knowledge Agent and embedded conversational AI-assistant. Despite having these tools, both accessible within the client’s GUI and on the public support portal, L3 tickets were peaking at ~8 per 1,000 calls with a median resolution time of 26 hours. The hidden drivers weren’t obvious. They cut across products, accounts, geographies and tenants, inflating the cost per ticket and exposing SLAs. Left unchecked, this would cap growth and jeopardize renewals with marquee accounts.</p>
+                <h3>Diagnosis</h3>
+                <p>Abandoning standard assumptions, we let the data tell us what mattered. We ran an unsupervised regularized model that explored hundreds of datapoints on its own and surfaced a handful of signals that strongly predicted L3 escalations. Then to separate causation from correlation, we applied difference-in-differences, A/B rollouts and other rigorous checks. What emerged was wildly unexpected! Just two factors stood out, which consistently drove L3 escalations: User Reading Comprehension and RAG quality.</p>
+                <h3>Our Approach</h3>
+                <p><strong>Defined Comprehension:</strong> Comprehensibility is the degree to which information can be understood accurately, effortlessly, and immediately to bring about functional clarity in its intended audience. In short, “Comprehension” is the difference between documentation that informs and documentation that resolves. Though, it depends on user’s prior knowledge & cognitive framing, it is disproportionately influenced by the “Readability” of a given material. Hence we chose to treat Readability as a proxy for comprehension.</p>
+                <p><strong>Created Readability Index:</strong> However, even the most advanced Readability models, such as InterpretARA and the RoBERTA-RF-T1 Hybrid failed to accurately assess true comprehension in technical documentation. These models were tuned on native-speakers’ prose and failed to account for the cognitive load of ESL (English as a Second Language) readers, particularly Taiwanese, Korean, and Japanese. To solve this, we built a custom Readability Index CohSixTM, grounded in a multi-dimensional Coh-Metrix framework. We chose Coh-Metrix because it goes beyond surface-level readability metrics. It measures narrativity, syntactic simplicity, word concreteness, referential & deep cohesion, and semantic clarity - reflect how real users process real documentation. We trained our model on handcrafted RAG, built from ESL corpora, domain-specific jargon, and actual customer ticket narratives. When back-tested, our index consistently aligned with ticket deflection outcomes, proving that readability, when measured right, is a robust proxy for comprehension.</p>
+                <p><strong>Discovered Target Readability Scores:</strong> Through large-scale analysis, we uncovered that ESL technicians across Korea, Japan and Taiwan have distinct readability thresholds, optimal ranges where comprehension is maximized. Our module identified these locale-specific targets and further discovered a “knee point,” where even a modest drop in readability score delivered over 10% incremental ticket savings. These thresholds became our target Readability Index scores for rewrite prioritization.</p>
+                <p><strong>Automated Rewrite using RAG-enriched LLMs:</strong> RAG-enriched, guardrail-equipped LLM rewrite engine, PlainWave™ operationalized this. The model batch-scored thousands of HTML pages, segmented them by gap-to-target, and selectively rewrote only those below threshold. Each rewrite was ESL-aware, rigorously tested for hallucination resistance, and tuned to improve readability without compromising technical fidelity. Coh-Metrix deltas were fed back into the model, enabling fast convergence through iterative prompting and precision-guided refinement</p>
+                <p><strong>Controlled Release, Validate Outcome & Scale:</strong> To make this a reproducible factory, we had designed our system to first identify low-performing pages by locale, rewrite them safely, and validate ticket reduction with executive-grade rigor, before scaling. Each batch passes through strict CI gates: scores must meet or exceed targets, and both validator & SME reviews are passed if sampled. Every page maintains a full evidence pack not limited to “before/after” text, diffs, scores, test results and reviewer metadata. Impact is statistically verified using two-tailed z-tests and Kaplan–Meier curves for MTTR.</p>
+                <h3>Architecture & Process: Diagnose. Rewrite. Prove.</h3>
+                <p><strong>CohGent Process Flow</strong><br>
+                GraaS’ CohGentR is AI-driven system that is composed of CohSixTM, and PlainWaveTM modules. Unlike generic readability tools, CohSixTM is a tuned variant of Coh-Metrix calibrated to measure comprehension for technical documentation. It scores every page for comprehension, identifies region-specific comprehension target and measures the gap between the two. Then, PlainWaveTM, our RAG-enriched, guardrail-ed LLM auto-rewrites those “gap-to-target” pages and iterates until the locale target is hit It improves only what’s unclear without making any changes to code/CLI/units. It validates each change with CI-grade anti-hallucination tests and live ticket outcomes.</p>
+                <h3>Result</h3>
+                <ul>
+                    <li>Reduced L3 tickets by 37%</li>
+                    <li>Saved US $1.5 M in avoided engineering effort.</li>
+                    <li>Cut Mean Time to Resolution (MTTR) by 53% for the remaining L3 calls.</li>
+                    <li>Raised self service success rate to 71% (+18 pp).</li>
+                    <li>Delivered documentation at the right cognitive load without altering a single CLI flag or code example.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="GraaS-High-Res-Photoroom.png" alt="Graas Logo" class="footer-logo" style="height:32px;vertical-align:middle;margin-right:8px;">
+                <span class="footer-company">Graas</span>
+            </div>
+            <div class="footer-contact">
+                <div><strong>Address:</strong> 123 Market Avenue, Suite 456, New York, NY 10001</div>
+                <div><strong>Phone:</strong> <a href="tel:+1234567890">+1 (234) 567-890</a></div>
+                <div><strong>Email:</strong> <a href="mailto:info@graas.com">info@graas.com</a></div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/graas" target="_blank" rel="noopener" aria-label="LinkedIn" style="margin-right:10px;">LinkedIn</a>
+                    <a href="https://x.com/graas" target="_blank" rel="noopener" aria-label="X">X</a>
+                </div>
+            </div>
+        </div>
+        <p style="margin-top:1rem;">&copy; 2025 Graas. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
